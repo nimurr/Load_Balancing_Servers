@@ -3,6 +3,8 @@ const cluster = require('cluster');
 const { generateKeyPair } = require('crypto');
 const numCPUs = require('os').cpus().length;
 
+console.log(numCPUs);
+
 if (cluster.isMaster) {
   console.log(`Master ${process.pid} is running`);
 
